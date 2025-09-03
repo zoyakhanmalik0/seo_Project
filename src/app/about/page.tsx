@@ -349,66 +349,78 @@ export default function About() {
       </section>
 
       {/* CONTENT CREATION SECTION */}
-            <section data-aos="fade-up" className="py-20">
-              
-              <div className="container mx-auto">
-                <div className="relative bg-blackfade2/40 backdrop-blur-lg rounded-[32px] p-12 lg:p-20" style={{ opacity: 1, transform: 'none' }}>
-                  <div className="flex justify-between items-start mb-20">
-                    <div className="max-w-2xl">
-                      <h2 className="text-3xl lg:text-4xl text-white font-semibold mb-4">Content Creation And Strategy</h2>
-                      <p className="text-gray-400 text-lg">High-quality, engaging content across blogs<span className="inline-block w-2 h-2 bg-default rounded-full mx-2 mb-0.5"></span>videos, and graphics designed to captivate and retain audiences.</p>
-                    </div>
-                    <div className="hidden lg:block relative" style={{ width: '150px', height: '150px' }}>
-                      <div className="absolute inset-0" style={{ animation: 'spin 15s linear infinite' }}>
-                        <svg viewBox="0 0 100 100" className="w-full h-full">
-                          <defs>
-                            <path id="circle" d="M 50,50 m -37,0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0"></path>
-                          </defs>
-                          <text fill="#86c232" fontSize="12">
-                            <textPath href="#circle" className="uppercase tracking-[0.9px]">Get free consultation • Get free consultation •</textPath>
-                          </text>
-                        </svg>
-                        <div className="absolute inset-0 flex items-center justify-center">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-arrow-down w-6 h-6 text-default">
-                            <path d="M12 5v14"></path>
-                            <path d="m19 12-7 7-7-7"></path>
-                          </svg>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <Swiper
-                    slidesPerView={2.2}
-                    spaceBetween={20}
-                    autoplay={{ delay: 2000, disableOnInteraction: false }}
-                    loop={true}
-                    modules={[Autoplay]}
-                    className="px-6"
-                    breakpoints={{
-                      640: { slidesPerView: 3.2 },
-                      1024: { slidesPerView: 4.2 },
-                    }}
-                  >
-                    {[
-                      { src: "https://res.cloudinary.com/dbcmdtr3r/image/upload/v1752999747/behance.3e543e62_nmruw8.png", alt: "Behance" },
-                      { src: "https://res.cloudinary.com/dbcmdtr3r/image/upload/v1752999747/trello.9ae4fd8e_lukts0.png", alt: "Trello" },
-                      { src: "https://res.cloudinary.com/dbcmdtr3r/image/upload/v1752999746/slack.dd220c30_kbgl1y.png", alt: "Slack" },
-                      { src: "https://res.cloudinary.com/dbcmdtr3r/image/upload/v1752999747/asana.f6fb7f2f_d7sgsh.png", alt: "Asana" },
-                      { src: "https://res.cloudinary.com/dbcmdtr3r/image/upload/v1752999196/upwork.687e3881_tl99is.png", alt: "Upwork" },
-                      { src: "https://res.cloudinary.com/dbcmdtr3r/image/upload/v1752999971/fiverr.d1b6a16a_qfhq9e.png", alt: "Fiverr" },
-                    ].map((item, index) => (
-                      <SwiperSlide key={index}>
-                        <div className="flex-shrink-0 bg-[#1a1a1a] rounded-2xl px-8 py-6 flex items-center justify-center min-w-[200px]">
-                          <img src={item.src} alt={item.alt} width="100" height="30" className="w-auto h-8 brightness-100" draggable="false" />
-                        </div>
-                      </SwiperSlide>
-                    ))}
-                  </Swiper>
-                </div>
-              </div>
-            </section>
-      
-      
+<section data-aos="fade-up" className="py-12 md:py-20">
+  <div className="container mx-auto px-4">
+    <div className="relative bg-blackfade2/40 backdrop-blur-lg rounded-2xl md:rounded-[32px] p-6 md:p-12 lg:p-20" style={{ opacity: 1, transform: 'none' }}>
+      <div className="flex flex-col md:flex-row items-start justify-between mb-12 md:mb-20">
+        <div className="max-w-2xl mb-8 md:mb-0">
+          <h2 className="mb-4 text-2xl md:text-3xl font-semibold text-white lg:text-4xl">Content Creation And Strategy</h2>
+          <p className="text-base md:text-lg text-gray-400">High-quality, engaging content across blogs<span className="inline-block w-2 h-2 bg-default rounded-full mx-2 mb-0.5"></span>videos, and graphics designed to captivate and retain audiences.</p>
+        </div>
+        <div className="relative self-center md:self-auto" style={{ width: '100px', height: '100px' }}>
+          <div className="absolute inset-0" style={{ animation: 'spin 15s linear infinite' }}>
+            <svg viewBox="0 0 100 100" className="w-full h-full">
+              <defs>
+                <path id="circle" d="M 50,50 m -37,0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0"></path>
+              </defs>
+              <text fill="#d43226ff" fontSize="10">
+                <textPath href="#circle" className="uppercase tracking-[0.9px]">Get free consultation • Get free consultation •</textPath>
+              </text>
+            </svg>
+            <div className="absolute inset-0 flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5 lucide lucide-arrow-down text-default">
+                <path d="M12 5v14"></path>
+                <path d="m19 12-7 7-7-7"></path>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+      <Swiper
+        slidesPerView={1.2}
+        spaceBetween={16}
+        autoplay={{ delay: 2000, disableOnInteraction: false }}
+        loop={true}
+        modules={[Autoplay]}
+        className="px-2 md:px-6"
+        breakpoints={{
+          640: { 
+            slidesPerView: 2.2,
+            spaceBetween: 20
+          },
+          768: {
+            slidesPerView: 3.2,
+            spaceBetween: 20
+          },
+          1024: { 
+            slidesPerView: 4.2,
+            spaceBetween: 20
+          },
+        }}
+      >
+        {[
+          { src: "https://res.cloudinary.com/dbcmdtr3r/image/upload/v1752999747/behance.3e543e62_nmruw8.png", alt: "Behance" },
+          { src: "https://res.cloudinary.com/dbcmdtr3r/image/upload/v1752999747/trello.9ae4fd8e_lukts0.png", alt: "Trello" },
+          { src: "https://res.cloudinary.com/dbcmdtr3r/image/upload/v1752999746/slack.dd220c30_kbgl1y.png", alt: "Slack" },
+          { src: "https://res.cloudinary.com/dbcmdtr3r/image/upload/v1752999747/asana.f6fb7f2f_d7sgsh.png", alt: "Asana" },
+          { src: "https://res.cloudinary.com/dbcmdtr3r/image/upload/v1752999196/upwork.687e3881_tl99is.png", alt: "Upwork" },
+          { src: "https://res.cloudinary.com/dbcmdtr3r/image/upload/v1752999971/fiverr.d1b6a16a_qfhq9e.png", alt: "Fiverr" },
+        ].map((item, index) => (
+          <SwiperSlide key={index}>
+            <div className="flex-shrink-0 bg-[#1a1a1a] rounded-xl md:rounded-2xl p-4 md:px-8 md:py-6 flex items-center justify-center w-full h-16 md:h-20">
+              <img 
+                src={item.src} 
+                alt={item.alt} 
+                className="w-auto h-6 md:h-8 brightness-100 object-contain" 
+                draggable="false" 
+              />
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
+    </div>
+  </div>
+</section>
       {/* Our Team Section */}
       <div className="container relative mx-auto px-4 !z-20">
         <div className="grid lg:grid-cols-2 gap-8 md:gap-16 items-start">

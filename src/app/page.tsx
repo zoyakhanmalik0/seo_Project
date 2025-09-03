@@ -843,7 +843,7 @@ export default function Home() {
 
 {/* <HowItWorksSection /> */}
 
-      {/* FEATURES SECTION */}
+{/* FEATURES SECTION */}
 <section className="py-12 sm:py-16 lg:py-20 bg-black relative overflow-hidden">
   {/* 🔴 Top Right Ring */}
   <div
@@ -915,21 +915,21 @@ export default function Home() {
               className="mt-4 flex !justify-center lg:!justify-start gap-4 group"
               href="/about"
             >
-              <button className="inline-flex items-center justify-center px-8 py-2 rounded-full bg-gray-600 text-white font-bold text-lg whitespace-nowrap">
+              <button className="inline-flex items-center justify-center px-6 sm:px-8 py-2 rounded-full bg-gray-600 text-white font-bold text-base sm:text-lg whitespace-nowrap">
                 Learn More
               </button>
-              <span className="w-12 h-12 sm:w-14 sm:h-14 rounded-full flex items-center justify-center bg-red-500 transform rotate-[-45deg] transition-all duration-300 ease-in-out group-hover:rotate-0 group-hover:bg-white">
+              <span className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-full flex items-center justify-center bg-red-500 transform rotate-[-45deg] transition-all duration-300 ease-in-out group-hover:rotate-0 group-hover:bg-white">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
+                  width="18"
+                  height="18"
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
                   strokeWidth="2"
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  className="lucide lucide-arrow-right text-lg sm:text-22 !text-black rounded-full"
+                  className="lucide lucide-arrow-right text-base sm:text-lg md:text-xl !text-black rounded-full"
                 >
                   <path d="M5 12h14"></path>
                   <path d="m12 5 7 7-7 7"></path>
@@ -940,27 +940,27 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Horizontal scroll features */}
-      <div className="flex gap-6 mt-8 sm:mt-10 overflow-x-auto scrollbar-hide p-3">
+      {/* Features container - vertical on mobile, horizontal scroll on larger screens */}
+      <div className="flex flex-col md:flex-row md:flex-nowrap md:overflow-x-auto md:scrollbar-hide gap-6 mt-8 sm:mt-10 md:pb-4">
         {/* Feature Card 1 */}
         <div
           data-aos="fade-up"
-          className="min-w-[320px] bg-blackfade2/40 backdrop-blur-lg p-10 rounded-[32px] overflow-hidden group hover:bg-[#151515] transition-colors duration-300"
+          className="w-full md:min-w-[320px] lg:min-w-[380px] bg-blackfade2/40 backdrop-blur-lg p-6 sm:p-8 md:p-10 rounded-2xl sm:rounded-[32px] overflow-hidden group hover:bg-[#151515] transition-colors duration-300 mb-6 md:mb-0"
         >
-          <div className="relative overflow-hidden rounded-[32px]">
+          <div className="relative overflow-hidden rounded-xl sm:rounded-2xl">
             <Image
               src="/2.png"
               alt="Custom Branding Solutions"
               width={1000}
               height={1000}
-              className="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-105"
+              className="w-full h-60 sm:h-72 md:h-80 object-cover transition-transform duration-500 group-hover:scale-105"
             />
           </div>
-          <div className="p-8">
-            <h3 className="text-white text-2xl font-semibold mb-3">
+          <div className="pt-6 sm:p-8">
+            <h3 className="text-white text-xl sm:text-2xl font-semibold mb-3">
               Custom Branding Solutions
             </h3>
-            <p className="text-gray-400">
+            <p className="text-gray-400 text-sm sm:text-base">
               Unique brand identity development, including logos, color palettes.
             </p>
           </div>
@@ -969,22 +969,22 @@ export default function Home() {
         {/* Feature Card 2 */}
         <div
           data-aos="fade-up"
-          className="min-w-[320px] bg-blackfade2/40 backdrop-blur-lg p-10 rounded-[32px] overflow-hidden group hover:bg-[#151515] transition-colors duration-300"
+          className="w-full md:min-w-[320px] lg:min-w-[380px] bg-blackfade2/40 backdrop-blur-lg p-6 sm:p-8 md:p-10 rounded-2xl sm:rounded-[32px] overflow-hidden group hover:bg-[#151515] transition-colors duration-300"
         >
-          <div className="relative overflow-hidden rounded-[32px]">
+          <div className="relative overflow-hidden rounded-xl sm:rounded-2xl">
             <Image
               src="https://res.cloudinary.com/dbcmdtr3r/image/upload/v1752998901/dddm.b39136e5_mhs0oh.jpg"
               alt="Data-Driven Digital Marketing"
               width={1000}
               height={1000}
-              className="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-105"
+              className="w-full h-60 sm:h-72 md:h-80 object-cover transition-transform duration-500 group-hover:scale-105"
             />
           </div>
-          <div className="p-8">
-            <h3 className="text-white text-2xl font-semibold mb-3">
+          <div className="pt-6 sm:p-8">
+            <h3 className="text-white text-xl sm:text-2xl font-semibold mb-3">
               Data-Driven Digital Marketing
             </h3>
-            <p className="text-gray-400">
+            <p className="text-gray-400 text-sm sm:text-base">
               Strategies combining SEO, PPC, content marketing
             </p>
           </div>
@@ -994,65 +994,6 @@ export default function Home() {
   </div>
 </section>
 
-      {/* CONTENT CREATION SECTION */}
-      <section data-aos="fade-up" className="py-20">
-        
-        <div className="container mx-auto">
-          <div className="relative bg-blackfade2/40 backdrop-blur-lg rounded-[32px] p-12 lg:p-20" style={{ opacity: 1, transform: 'none' }}>
-            <div className="flex items-start justify-between mb-20">
-              <div className="max-w-2xl">
-                <h2 className="mb-4 text-3xl font-semibold text-white lg:text-4xl">Content Creation And Strategy</h2>
-                <p className="text-lg text-gray-400">High-quality, engaging content across blogs<span className="inline-block w-2 h-2 bg-default rounded-full mx-2 mb-0.5"></span>videos, and graphics designed to captivate and retain audiences.</p>
-              </div>
-              <div className="relative hidden lg:block" style={{ width: '150px', height: '150px' }}>
-                <div className="absolute inset-0" style={{ animation: 'spin 15s linear infinite' }}>
-                  <svg viewBox="0 0 100 100" className="w-full h-full">
-                    <defs>
-                      <path id="circle" d="M 50,50 m -37,0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0"></path>
-                    </defs>
-                    <text fill="#d43226ff" fontSize="12">
-                      <textPath href="#circle" className="uppercase tracking-[0.9px]">Get free consultation • Get free consultation •</textPath>
-                    </text>
-                  </svg>
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6 lucide lucide-arrow-down text-default">
-                      <path d="M12 5v14"></path>
-                      <path d="m19 12-7 7-7-7"></path>
-                    </svg>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <Swiper
-              slidesPerView={2.2}
-              spaceBetween={20}
-              autoplay={{ delay: 2000, disableOnInteraction: false }}
-              loop={true}
-              modules={[Autoplay]}
-              className="px-6"
-              breakpoints={{
-                640: { slidesPerView: 3.2 },
-                1024: { slidesPerView: 4.2 },
-              }}
-            >
-              {[
-                { src: "https://res.cloudinary.com/dbcmdtr3r/image/upload/v1752999747/behance.3e543e62_nmruw8.png", alt: "Behance" },
-                { src: "https://res.cloudinary.com/dbcmdtr3r/image/upload/v1752999747/trello.9ae4fd8e_lukts0.png", alt: "Trello" },
-                { src: "https://res.cloudinary.com/dbcmdtr3r/image/upload/v1752999746/slack.dd220c30_kbgl1y.png", alt: "Slack" },
-                { src: "https://res.cloudinary.com/dbcmdtr3r/image/upload/v1752999747/asana.f6fb7f2f_d7sgsh.png", alt: "Asana" },
-                { src: "https://res.cloudinary.com/dbcmdtr3r/image/upload/v1752999196/upwork.687e3881_tl99is.png", alt: "Upwork" },
-                { src: "https://res.cloudinary.com/dbcmdtr3r/image/upload/v1752999971/fiverr.d1b6a16a_qfhq9e.png", alt: "Fiverr" },
-              ].map((item, index) => (
-                <SwiperSlide key={index}>
-                  <div className="flex-shrink-0 bg-[#1a1a1a] rounded-2xl px-8 py-6 flex items-center justify-center min-w-[200px]">
-                    <img src={item.src} alt={item.alt} width="100" height="30" className="w-auto h-8 brightness-100" draggable="false" />
-                  </div>
-                </SwiperSlide>
-              ))}
-            </Swiper>
-          </div>
-        </div>
-      </section>
 
       <section className="bg-black py-16 md:py-24 relative overflow-hidden">
   <div className="container mx-auto px-4 lg:px-8">
@@ -1114,81 +1055,72 @@ export default function Home() {
       <NEWS/>
    {/* NEWS SECTION */}
 
+{/* CTA Section */}
+<section className="relative w-full overflow-hidden py-16 md:py-32 bg-black text-white">
+  {/* Left blurred ring - fixed positioning for mobile */}
+  <div className="absolute top-1/4 -right-20 md:right-[-250px] z-0 pointer-events-none" style={{width: '500px', height: '500px'}}>
+    <div style={{
+      width: '70%',
+      height: '70%',
+      borderRadius: '50%',
+      border: '40px solid rgba(239,68,68,0.45)',
+      filter: 'blur(32px) brightness(0.6)',
+      boxShadow: '0 0 3px 0.5px #ef4444, 0 0 6px 1px #ef4444',
+      boxSizing: 'border-box',
+    }} />
+  </div>
 
-   {/* CTA Section */}
-
-          <section
-      className="relative w-full overflow-hidden py-24 md:py-32 bg-black text-white"
-    >
-      {/* Overlay Inner Background - made darker */}
-
-      {/* Left blurred ring */}
-        <div className="absolute top-0.5/4 right-[-250px] z-0 pointer-events-none" style={{width:'500px',height:'500px'}}>
-          <div style={{
-            width: '70%',
-            height: '70%',
-            borderRadius: '50%',
-            border: '40px solid rgba(239,68,68,0.45)',
-            filter: 'blur(32px) brightness(0.6)',
-            boxShadow: '0 0 3px 0.5px #ef4444, 0 0 6px 1px #ef4444',
-            boxSizing: 'border-box',
-          }} />
-        </div>
-      <div
-        className="absolute inset-0 bg-cover bg-center opacity-20"
-      />
-
-      <div className="relative max-w-[90rem] mx-auto sm:px-6 lg:px-8 z-10">
-        <div className="flex flex-col items-center text-center">
-          <span className="text-white text-32 font-semibold uppercase tracking-wider">
-            Let&apos;s Collaborate
-          </span>
-          <div className="relative inline-flex flex-col items-center">
-            <h2 className="text-42 lg:text-[180px] font-bold text-white leading-loose tracking-tight">
-              LET&apos;S WORK
-            </h2>
-            <div className="absolute -top-14 lg:top-52 my-6 md:my-8 z-10 group">
-              <Link
-                className="flex items-center justify-center w-28 h-28 lg:w-40 lg:h-40 md:w-48 md:h-48 bg-default rounded-full hover:bg-default transition-all duration-300 group shadow-[0_0_45px_rgba(212,255,77,1)] hover:shadow-[0_0_35px_rgba(212,255,77,1)]"
-                href="/contact"
+  <div className="relative max-w-[90rem] mx-auto px-4 sm:px-6 lg:px-8 z-10">
+    <div className="flex flex-col items-center text-center">
+      <span className="text-white text-xl md:text-3xl font-semibold uppercase tracking-wider mb-4">
+        Let&apos;s Collaborate
+      </span>
+      <div className="relative inline-flex flex-col items-center">
+        <h2 className="text-4xl md:text-6xl lg:text-[180px] font-bold text-white leading-tight md:leading-loose tracking-tight">
+          LET&apos;S WORK
+        </h2>
+        <div className="absolute -top-8 md:-top-14 lg:top-52 my-6 md:my-8 z-10 group">
+          <Link
+            className="flex items-center justify-center w-20 h-20 md:w-28 md:h-28 lg:w-40 lg:h-40 bg-default rounded-full hover:bg-default transition-all duration-300 group shadow-[0_0_20px_rgba(212,255,77,0.7)] md:shadow-[0_0_45px_rgba(212,255,77,1)] hover:shadow-[0_0_35px_rgba(212,255,77,1)]"
+            href="/contact"
+          >
+            <div className="flex flex-col items-center text-xs md:text-14 lg:text-20 font-semibold">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="lucide lucide-arrow-up-right ml-1 w-5 h-5 md:w-8 md:h-8 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
               >
-                <div className="flex flex-col items-center text-14 lg:text-20 font-semibold">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="28"
-                    height="28"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="lucide lucide-arrow-up-right ml-1 w-8 h-8 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
-                  >
-                    <path d="M7 7h10v10"></path>
-                    <path d="M7 17 17 7"></path>
-                  </svg>
-                  Get In Touch
-                </div>
-              </Link>
+                <path d="M7 7h10v10"></path>
+                <path d="M7 17 17 7"></path>
+              </svg>
+              Get In Touch
             </div>
-            <h2 className="text-42 lg:text-[180px] font-bold text-white leading-[0.95] tracking-tight">
-              TOGETHER
-            </h2>
-          </div>
+          </Link>
         </div>
+        <h2 className="text-4xl md:text-6xl lg:text-[180px] font-bold text-white leading-[0.95] tracking-tight mt-2 md:mt-0">
+          TOGETHER
+        </h2>
       </div>
+    </div>
+  </div>
 
-      <div className="absolute bottom-80 -left-32 z-0">
-        <Image
-          src="/media/CTA.61aa7579.png"
-          alt="Astrivix Sphere Image"
-          width={320}
-          height={320}
-          className="w-80 h-80 animate-spin-grow"
-        />
-      </div>
-    </section>
+  <div className="absolute bottom-10 md:bottom-80 -left-20 md:-left-32 z-0 opacity-70 md:opacity-100">
+    <Image
+      src="/media/CTA.61aa7579.png"
+      alt="Astrivix Sphere Image"
+      width={240}
+      height={240}
+      className="w-48 h-48 md:w-80 md:h-80 animate-spin-grow"
+    />
+  </div>
+</section>
 
       {/* Footer */}
       <Footer />
