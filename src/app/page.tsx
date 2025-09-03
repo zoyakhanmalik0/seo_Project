@@ -1009,7 +1009,7 @@ export default function Home() {
                     <defs>
                       <path id="circle" d="M 50,50 m -37,0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0"></path>
                     </defs>
-                    <text fill="#86c232" fontSize="12">
+                    <text fill="#d43226ff" fontSize="12">
                       <textPath href="#circle" className="uppercase tracking-[0.9px]">Get free consultation • Get free consultation •</textPath>
                     </text>
                   </svg>
