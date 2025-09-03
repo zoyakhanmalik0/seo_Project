@@ -32,11 +32,11 @@ export default function Navigation() {
 
   return (
     <>
-      {/* Contact Sidebar Button - Always visible with conditional icon */}
+      {/* Contact Sidebar Button - Only visible on desktop (hidden on mobile) */}
       <button
         onClick={() => setShowContact((prev) => !prev)}
         aria-label={showContact ? "Close Contact Sidebar" : "Open Contact Sidebar"}
-        className="fixed bg-transparent border-none p-0 cursor-pointer top-4 right-4 lg:right-8 transition-all duration-300"
+        className="fixed bg-transparent border-none p-0 cursor-pointer top-4 right-4 lg:right-8 transition-all duration-300 hidden lg:block"
         style={{ zIndex: 10001 }}
       >
         <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -127,14 +127,9 @@ export default function Navigation() {
             </ul>
           </div>
 
-          {/* Mobile Right Side - Contact Button + Menu Button */}
-          <div className="lg:hidden flex items-center gap-3">
-            {/* Mobile Contact Button */}
-            <Link href="/contact" className="bg-red-600 hover:bg-red-700 text-white px-3 py-2 rounded-full text-sm font-medium transition-colors">
-              Contact
-            </Link>
-
-            {/* Mobile Menu Button */}
+          {/* Mobile Right Side - Only Hamburger Menu Button */}
+          <div className="lg:hidden flex items-center">
+            {/* Mobile Menu Button (Only visible on mobile) */}
             <button
               onClick={toggleMobileMenu}
               className="flex w-12 h-12 items-center justify-center rounded-lg cursor-pointer bg-red-600 hover:bg-red-700 text-white transition-colors"
@@ -238,7 +233,7 @@ export default function Navigation() {
                 )}
               </div>
 
-              {/* Mobile Contact Button (Alternative) */}
+              {/* Mobile Contact Button inside the menu */}
               <div className="pt-4">
                 <Link 
                   href="/contact" 
@@ -253,7 +248,7 @@ export default function Navigation() {
         )}
       </nav>
 
-      {/* Contact Sidebar */}
+      {/* Contact Sidebar - Only for desktop */}
       <ContactSidebar open={showContact} onClose={() => setShowContact(false)} />
     </>
   );

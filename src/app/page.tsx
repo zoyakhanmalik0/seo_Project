@@ -23,13 +23,14 @@ import AOS from 'aos';
 import RotatingText from "./components/RotatingText";
 import DonutBackground from "./components/DonutBackground";
 
-// Cursor Following Dot Component
+
+/* ✅ Cursor Following Dot Component */
 function CursorDot() {
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    const handleMouseMove = (e : MouseEvent) => {
+    const handleMouseMove = (e: MouseEvent) => {
       setPosition({ x: e.clientX, y: e.clientY });
       setIsVisible(true);
     };
@@ -38,24 +39,24 @@ function CursorDot() {
       setIsVisible(false);
     };
 
-    document.addEventListener('mousemove', handleMouseMove);
-    document.addEventListener('mouseleave', handleMouseLeave);
+    document.addEventListener("mousemove", handleMouseMove as EventListener);
+    document.addEventListener("mouseleave", handleMouseLeave);
 
     return () => {
-      document.removeEventListener('mousemove', handleMouseMove);
-      document.removeEventListener('mouseleave', handleMouseLeave);
+      document.removeEventListener("mousemove", handleMouseMove as EventListener);
+      document.removeEventListener("mouseleave", handleMouseLeave);
     };
   }, []);
 
   return (
     <div
-      className={`fixed w-4 h-4 bg-red-500 rounded-full pointer-events-none z-[9999] transition-opacity duration-200 ${
-        isVisible ? 'opacity-100' : 'opacity-0'
+      className={`fixed w-4 h-4 bg-red-500 rounded-full pointer-events-none z-[9999] transition-opacity duration-200 transform-gpu ${
+        isVisible ? "opacity-100" : "opacity-0"
       }`}
       style={{
         left: position.x - 8,
         top: position.y - 8,
-        transform: 'translate(0, 0)',
+        transition: "left 0.15s ease-out, top 0.15s ease-out",
       }}
     />
   );
