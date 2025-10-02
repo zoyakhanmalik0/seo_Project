@@ -1,0 +1,42 @@
+.slides, & > .dg {
+  display: none;
+}
+
+
+.slidesf{
+width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: blue; */
+}
+.draw{
+  overflow: visible;
+
+}
+.slides{
+  width: 800px;
+  height: 100vh;
+  overflow: visible;
+}
+
+.slides img{
+  width: auto;
+  height: 300px;
+  overflow: visible;
+}
+#particle-slider{
+  overflow: visible;
+}
+
+.slides{
+  overflow: visible;
+}
+
+@media screen and (max-width: 768px) {
+  #particle-slider {
+    display: none !important;
+  }
+}
+
+
