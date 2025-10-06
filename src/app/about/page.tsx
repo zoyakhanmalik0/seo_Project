@@ -684,15 +684,15 @@ export default function About() {
             </div>
           </div>
         </div>
-        <div className="absolute z-0 bottom-10 md:bottom-20 -right-20 md:-right-40">
-  <Image
-    src="/media/hex.eced7c60.png"
-    alt="Hex"
-    width={260}
-    height={260}
-    className="w-[220px] h-[220px] md:w-[380px] md:h-[300px] animate-spin-grow opacity-80"
-  />
-</div>
+  <div className="absolute z-0 bottom-10 md:bottom-20 -right-20 md:-right-32">
+          <Image
+            src="/media/hex.eced7c60.png"
+            alt="Hex"
+            width={180}
+            height={180}
+            className="w-80 h-80 md:w-80 md:h-60 animate-spin-grow"
+          />
+        </div>
       </section>
       
       {/* Testimonials Section */}
